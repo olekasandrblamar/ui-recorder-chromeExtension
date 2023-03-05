@@ -1,0 +1,37 @@
+{
+    "manifest_version" : 3,
+    "name" : "ui-recorder",
+    "version" : "1.0.0",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "webRequest",
+        "contextMenus",
+        "downloads",
+        "webNavigation",
+        "notifications",
+        "storage",
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "match_about_blank": true,
+            "all_frames": true
+        }
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"        
+    },
+    "action": {
+        "default_popup": "notes.html",
+        "default_icon" : "icon.png",
+        "default_title" : "A popup will appear"
+    }
+}
