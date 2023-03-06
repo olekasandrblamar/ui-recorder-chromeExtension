@@ -150,4 +150,38 @@ document.querySelector('body').addEventListener('keyup', (event) => {
     //     }
     // }
 })
+document.querySelector('body').addEventListener('dblclick', (event) => {
+    var target= 'target' in event? event.target : event.srcElement;
+    var path= getPathTo(target);
+    console.log("dbclick:" + path);
+    return;
+})
+document.querySelector('body').addEventListener('change', (event) => {
+    console.log("change:" + event);
+    return;
+})
+document.querySelector('body').addEventListener('mousedown', (event) => {
+    console.log("mousedown:" + event);
+    return;
+})
+document.querySelector('body').addEventListener('resize', (event) => {
+    console.log("resize:" + event);
+    return;
+})
+document.querySelector('body').addEventListener('select', (event) => {
+    console.log("select:" + event);
+    return;
+})
+document.querySelector('body').addEventListener('submit', (event) => {
+    console.log("submit:" + event);
+    return;
+})
+document.querySelector('body').addEventListener('load', (event) => {
+    console.log("load:" + event);
+    return;
+})
+document.querySelector('body').addEventListener('unload', (event) => {
+    console.log("unload:" + event);
+    return;
+})
 console.log('ui recorder is running')
