@@ -1,4 +1,4 @@
 # UI recorder
-#### this is ur recorder chrome extension
+#### this is ui recorder chrome extension
 
 
